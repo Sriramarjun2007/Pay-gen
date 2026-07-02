@@ -1,0 +1,49 @@
+import webicon from "../assets/webicon.png";
+import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
+function Navbar() {
+  return (
+    <nav className="bg-text-white shadow-lg fixed top-0 left-0 w-full">
+      <div className="w-full  p-6 flex items-center gap-6">
+        
+        {/* Logo */}
+        <div >
+          <img src={webicon} />
+        </div>
+
+        {/* Navigation */}
+        <ul className="flex items-center gap-10 text-xl font-medium ml-55">
+          <Link to="/">
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Home
+          </li>
+          </Link>
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Dashboard
+          </li>
+          <Link to="/generateslip">
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Generate Payslip
+          </li>
+          </Link>
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Payslip History
+          </li>
+
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Help
+          </li>
+        </ul>
+        <div className="ml-50">
+          <FaUser size={20} />
+        </div>
+        {/* Profile Button */}
+        <button className="bg-blue-600 text-white ml-5 hover:bg-blue-700 px-9 py-2 rounded-lg font-medium transition duration-300">
+          Login
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
