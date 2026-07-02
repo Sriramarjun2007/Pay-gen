@@ -18,31 +18,42 @@ function Navbar() {
             Home
           </li>
           </Link>
+
+          <Link to="/dashboard">
           <li className="cursor-pointer hover:text-blue-400 transition duration-300">
             Dashboard
           </li>
+          </Link>
+
           <Link to="/generateslip">
           <li className="cursor-pointer hover:text-blue-400 transition duration-300">
             Generate Payslip
           </li>
           </Link>
+
           <Link to="/history">
-            <li className="cursor-pointer hover:text-blue-400 transition duration-300">
-              Payslip History
-            </li>
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Payslip History
+          </li>
           </Link>
 
           <li className="cursor-pointer hover:text-blue-400 transition duration-300">
             Help
           </li>
         </ul>
-        <div className="ml-50">
-          <FaUser size={20} />
-        </div>
+
+        <Link to="/profile">
+          <div className="ml-50">
+            <FaUser size={20} />
+          </div>
+        </Link>
+
         {/* Profile Button */}
-        <button className="bg-blue-600 text-white ml-5 hover:bg-blue-700 px-9 py-2 rounded-lg font-medium transition duration-300">
-          Login
-        </button>
+        <Link to="/login">
+          <button className="bg-blue-600 text-white ml-5 hover:bg-blue-700 px-9 py-2 rounded-lg font-medium transition duration-300">
+            Login
+          </button>
+        </Link>
       </div>
     </nav>
   );
