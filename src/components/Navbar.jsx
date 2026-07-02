@@ -26,9 +26,11 @@ function Navbar() {
             Generate Payslip
           </li>
           </Link>
-          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
-            Payslip History
-          </li>
+          <Link to="/history">
+            <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+              Payslip History
+            </li>
+          </Link>
 
           <li className="cursor-pointer hover:text-blue-400 transition duration-300">
             Help
