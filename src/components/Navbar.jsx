@@ -3,7 +3,7 @@ import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
-    <nav className="bg-text-white shadow-lg fixed top-0 left-0 w-full">
+    <nav className="print:hidden bg-text-white shadow-lg fixed top-0 left-0 w-full">
       <div className="w-full  p-6 flex items-center gap-6">
         
         {/* Logo */}
