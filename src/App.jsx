@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Howitworks from "./components/Howitworks";
 import Pricing from "./components/Pricing";
+import Footer from "./components/Footer";
+import Help from "./pages/Help";
 function App() {
   return (
     <>
@@ -20,6 +22,8 @@ function App() {
           <Feature/>
           <Howitworks/>
           <Pricing/>
+          <Footer/>
+
           </>
           } />
         <Route path="/generateslip" element={<Generateslip/>}/>
@@ -27,6 +31,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/help" element={<Help />} />
 
       </Routes>
     </>

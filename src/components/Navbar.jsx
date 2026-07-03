@@ -36,10 +36,11 @@ function Navbar() {
             Payslip History
           </li>
           </Link>
-
+          <Link to="/help">
           <li className="cursor-pointer hover:text-blue-400 transition duration-300">
             Help
           </li>
+          </Link>
         </ul>
 
         <Link to="/profile">
