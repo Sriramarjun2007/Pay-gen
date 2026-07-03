@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaSyncAlt } from "react-icons/fa";
 import { getPayslips } from "../utils/payslipStorage";
-
+import { getProfile } from "../utils/profileStorage";
 // One summary card at the top of the dashboard
 function StatCard({ label, value, sub }) {
   return (
@@ -18,7 +18,7 @@ function StatCard({ label, value, sub }) {
 
 export default function Dashboard() {
   const [payslips] = useState(getPayslips());
-
+  const profile = getProfile();
   // Most recently generated payslip (payslips are saved newest-first)
   const latest = payslips[0];
 
@@ -37,7 +37,10 @@ export default function Dashboard() {
         {/* Greeting */}
         <div>
           <h1 className="text-2xl font-bold">
-            Welcome back, <span className="text-blue-600">{latest?.empName || "there"}</span>
+            Welcome back,{" "}
+            <span className="text-blue-600">
+              {profile?.empName || latest?.empName || "there"}
+            </span>
           </h1>
           <p className="text-gray-500">Here's an overview of your payroll information</p>
         </div>

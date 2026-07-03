@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getLoginInfo } from "../utils/authStorage";
-
+import { saveProfile } from "../utils/profileStorage";
 export default function Profile() {
   // Only "email" comes from Login — everything else has no source yet,
   // so it starts blank instead of fake sample data.
@@ -30,10 +30,19 @@ export default function Profile() {
       .toUpperCase();
   }
 
-  function handleUpdate() {
-    // TODO: replace with your real API call to save the profile
-    alert("Profile updated!");
-  }
+ function handleUpdate() {
+  saveProfile({
+    empName,
+    empId,
+    designation,
+    department,
+    phone,
+    emailId,
+    companyName,
+  });
+
+  alert("Profile updated successfully!");
+}
 
   return (
     <div className="min-h-screen bg-gray-50 mt-30">
