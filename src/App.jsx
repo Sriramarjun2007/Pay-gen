@@ -7,6 +7,8 @@ import History from "./pages/History";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Howitworks from "./components/Howitworks";
+import Pricing from "./components/Pricing";
 function App() {
   return (
     <>
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<>
           <Home />
           <Feature/>
+          <Howitworks/>
+          <Pricing/>
           </>
           } />
         <Route path="/generateslip" element={<Generateslip/>}/>

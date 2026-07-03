@@ -1,8 +1,8 @@
-import step1 from "../assets/step1.png";
-import step2 from "../assets/step2.png";
-import step3 from "../assets/step3.png";
-import step4 from "../assets/step4.png";
-import step5 from "../assets/step5.png";
+import step1 from "../assets/step1.jpg";
+import step2 from "../assets/step2.jpg";
+import step3 from "../assets/step3.jpg";
+import step4 from "../assets/step4.jpg";
+import step5 from "../assets/step5.jpg";
 
 const steps = [
   {
@@ -46,7 +46,7 @@ function HowItWorks() {
           How It Works
         </h2>
 
-        <p className="mt-6 text-xl text-gray-600 max-w-4xl">
+        <p className="mt-6 text-xl text-gray-600 max-w-5xl">
           Learn how to streamline your payroll process with PayGenius in just a
           few simple steps.
         </p>
