@@ -5,13 +5,14 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { HiOutlineSparkles } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="bg-slate-100 border-t border-gray-300 mt-20">
       <div className="max-w-7xl mx-auto px-8 py-12">
 
-        {/* Top Section */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* Logo */}
@@ -22,15 +23,34 @@ function Footer() {
             </div>
 
             <ul className="space-y-3 text-lg">
-              <li className="hover:text-blue-600 cursor-pointer">Home</li>
-              <li className="hover:text-blue-600 cursor-pointer">Dashboard</li>
-              <li className="hover:text-blue-600 cursor-pointer">
-                Generate Payslip
-              </li>
-              <li className="hover:text-blue-600 cursor-pointer">
-                Payslip History
-              </li>
-              <li className="hover:text-blue-600 cursor-pointer">Help</li>
+              <Link to="/">
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Home
+          </li>
+          </Link>
+
+          <Link to="/dashboard">
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Dashboard
+          </li>
+          </Link>
+
+          <Link to="/generateslip">
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Generate Payslip
+          </li>
+          </Link>
+
+          <Link to="/history">
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Payslip History
+          </li>
+          </Link>
+          <Link to="/help">
+          <li className="cursor-pointer hover:text-blue-400 transition duration-300">
+            Help
+          </li>
+          </Link>
             </ul>
           </div>
 
